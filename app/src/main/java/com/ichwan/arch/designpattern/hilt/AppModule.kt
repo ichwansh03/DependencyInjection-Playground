@@ -1,0 +1,19 @@
+package com.ichwan.arch.designpattern.hilt
+
+import dagger.Module
+import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
+import javax.inject.Named
+import javax.inject.Singleton
+
+@Module
+@InstallIn(SingletonComponent::class)
+object AppModule {
+
+    @Singleton
+    @Provides
+    @Named("string1")
+    fun provideString1() = "This is a string we will inject from string1"
+
+}
